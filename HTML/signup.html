@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/logincss.css" />
+  </head>
+  <body link="white">
+    <form method="POST" name="signup">
+      <h1>JOIN THE MUFC ARMY</h1>
+      <img
+        src="../img/utdlogo-removebg-preview2.png"
+        height="80px"
+        width="80px"
+      />
+      <br />
+      <h4>Name</h4>
+      <input type="text" id="name" />
+      <h4>Birthday</h4>
+      <input type="date" id="bday" />
+      <h4>Email address</h4>
+      <input type="email" id="mail" />
+      <h4>Password</h4>
+      <input type="password" id="password" />
+      <h4>Confirm password</h4>
+      <input type="password" id="conPass" /><br />
+      <br /><a
+        href="#"
+        class="submit"
+        style="text-decoration: none;"
+        onclick="return validateForm()"
+        >REGISTER</a
+      ><br />
+      <br />
+      Already have an account?<a href="login.html">Sign in</a><br />
+      <br />Back to
+      <a href="index.html">Home</a>
+    </form>
+
+    <script>
+      //Form Validation
+      function validateForm() {
+        x = document.forms["signup"]["name"].value;
+        var regex = /^[a-zA-Z]+$/;
+        if (x == "") {
+          alert("Name cannot be empty!");
+          return false;
+        } else if (regex.test(x) == false) {
+          alert("Name can contain only letters!");
+          return false;
+        }
+
+        x = document.forms["signup"]["bday"].value;
+        if (x == "") {
+          alert("We'd love to know your birthday!");
+          return false;
+        }
+
+        x = document.forms["signup"]["mail"].value;
+        var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+        if (regex.test(x) == false) {
+          alert("Please enter a valid e-mail address!");
+          return false;
+        }
+
+        x = document.forms["signup"]["password"].value;
+        if (x.length < 8) {
+          alert("Password must have at least 8 characters!");
+          return false;
+        }
+
+        y = document.forms["signup"]["conPass"].value;
+        if (y != x) {
+          alert("Passwords do not match!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

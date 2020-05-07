@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/logincss.css" />
+  </head>
+  <body link="white">
+    <form method="POST" name="login">
+      <h1>SIGN IN</h1>
+      <img
+        src="../img/utdlogo-removebg-preview2.png"
+        height="80px"
+        width="80px"
+      />
+      <br />
+      <h4>Email address</h4>
+      <input type="text" id="mail" /><br />
+      <h4>Password</h4>
+      <input type="password" id="password" />
+      <br /><input type="checkbox" />Remember me<br />
+      <br /><a
+        href="##"
+        class="submit"
+        style="text-decoration: none;"
+        onclick="return validateForm()"
+        >SIGN IN</a
+      ><br />
+      <br />
+      <a href="#">Forgot Password?</a><br />
+      <a href="signup.html">Not registered?</a><br />
+      <br />Back to <a href="index.html">Home</a>
+    </form>
+
+    <script>
+      //Form Validation
+      function validateForm() {
+        x = document.forms["login"]["mail"].value;
+        var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+        if (regex.test(x) == false) {
+          alert("Please enter a valid e-mail address!");
+          return false;
+        }
+
+        x = document.forms["login"]["password"].value;
+        if (x.length < 8) {
+          alert("Password must have at least 8 characters!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

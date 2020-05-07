@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-image: url(../img/wallpaperOT.jpg);
+  background-size: cover;
+  color: #333;
+}
+
+form {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.submit {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  /* background: linear-gradient(to right, #9c27b0, #e040fb); */
+  background: #ff0033;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+}
+
+.submit:hover {
+  background-color: #333;
+  transition: 0.3s;
+}
