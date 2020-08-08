@@ -1,7 +1,7 @@
 //Since I am using a free API, can't use this more than 100 times a day
 
 fetch(
-  "https://gnews.io/api/v3/search?q=Manchester%20United&token="YOUR-API-KEY""
+  "https://gnews.io/api/v3/search?q=Manchester%20United&token=2916add9732293d3321924e1eb354fda"  //token="YOUR-API-KEY"
 )
   .then(function (response) {
     return response.json();
